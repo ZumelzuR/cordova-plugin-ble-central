@@ -720,6 +720,7 @@ public class Peripheral extends BluetoothGattCallback {
 
         if (service == null) {
             callbackContext.error("Service " + serviceUUID + " not found.");
+            bleProcessing = false;
             return;
         }
 
